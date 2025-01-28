@@ -1,7 +1,7 @@
-import {existsSync, readFileSync} from 'fs';
-import {banner} from './banner';
 import dotenv from 'dotenv';
+import {existsSync, readFileSync} from 'fs';
 import path from 'path';
+import {banner} from './banner';
 
 if (process.env.npm_config_conf) {
   if (
@@ -502,6 +502,7 @@ const store = {
     'xboxss',
     'xboxsx',
   ]),
+  showOnlyCountry: envOrArray(process.env.SHOW_ONLY_COUNTRY, []),
   stores: envOrArray(process.env.STORES, ['amazon', 'bestbuy']).map(entry => {
     const [name, minPageSleep, maxPageSleep] = entry.match(/[^:]+/g) ?? [];
 

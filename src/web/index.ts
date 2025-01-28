@@ -125,6 +125,9 @@ function handleAPI(
     case 'stores':
       sendJSON(response, [...storeList.keys()]);
       return;
+    case 'countries':
+      sendJSON(response, [...storeList].)
+      return;
     case 'brands':
       sendJSON(response, getAllBrands());
       return;
